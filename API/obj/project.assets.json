@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Asp.net core Udemy\\Udemy Asp.net Core\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Asp.net core Udemy\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\Asp.net core Udemy\\Udemy Asp.net Core\\API\\API.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\Asp.net core Udemy\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\Asp.net core Udemy\\Udemy Asp.net Core\\API\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\Asp.net core Udemy\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
