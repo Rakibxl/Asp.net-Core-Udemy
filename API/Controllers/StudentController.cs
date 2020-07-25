@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using API.Models;
-using Microsoft.AspNetCore.Http;
+using DLL.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    
+
     public class StudentController : MainApiController
     {
         [HttpGet]
@@ -23,13 +20,13 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Insert(Models.Student student)
+        public IActionResult Insert(Student student)
         {
             return Ok(StudentStatic.InsertStudent(student));
         }
 
         [HttpPut("{email}")]
-        public IActionResult Update(string email, Models.Student student)
+        public IActionResult Update(string email, Student student)
         {
             return Ok(StudentStatic.UpdateStudent(email, student));
         }
@@ -42,27 +39,27 @@ namespace API.Controllers
 
     public static class StudentStatic
     {
-        private static List<API.Models.Student> AllStudent { get; set; } = new List<Models.Student>();
+        private static List<DLL.Model.Student> AllStudent { get; set; } = new List<DLL.Model.Student>();
 
-        public static API.Models.Student InsertStudent(API.Models.Student Student)
+        public static Student InsertStudent(Student Student)
         {
             AllStudent.Add(Student);
             return Student;
         }
 
-        public static List<Models.Student> GetAllStudent()
+        public static List<Student> GetAllStudent()
         {
             return AllStudent;
         }
 
-        public static Models.Student GetAStudent(string email)
+        public static Student GetAStudent(string email)
         {
             return AllStudent.FirstOrDefault(x => x.Email == email);
         }
 
-        public static Models.Student UpdateStudent(string email, API.Models.Student Student)
+        public static DLL.Model.Student UpdateStudent(string email, DLL.Model.Student Student)
         {
-            Models.Student result = new API.Models.Student();
+            DLL.Model.Student result = new Student();
             foreach (var aStudent in AllStudent)
             {
                 if (email == aStudent.Email)
@@ -74,7 +71,7 @@ namespace API.Controllers
             return result;
         }
 
-        public static Models.Student DeleteStudent(string email)
+        public static Student DeleteStudent(string email)
         {
             var Student = AllStudent.FirstOrDefault(x => x.Email == email);
             AllStudent = AllStudent.Where(x => x.Email != Student.Email).ToList();

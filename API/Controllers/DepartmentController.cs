@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using API.Models;
+using DLL.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,13 +23,13 @@ namespace Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Insert(Department department)
+        public IActionResult Insert(DLL.Model.Department department)
         {
             return Ok(DepartmentStatic.InsertDepartment(department));
         }
 
         [HttpPut("{code}")]
-        public IActionResult Update(string code,Department department)
+        public IActionResult Update(string code, DLL.Model.Department department)
         {
             return Ok(DepartmentStatic.UpdateDepartment(code,department));
         }
