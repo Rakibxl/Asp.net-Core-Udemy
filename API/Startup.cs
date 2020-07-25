@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
+using DLL;
 
 namespace API
 {
@@ -32,6 +33,8 @@ namespace API
                 config.AssumeDefaultVersionWhenUnspecified = true;
             });
 
+
+            DLLDependency.AllDependency(services, Configuration);
 
         }
 
