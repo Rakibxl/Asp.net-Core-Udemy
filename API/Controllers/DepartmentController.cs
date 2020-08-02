@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using API.Controllers;
 using DLL.Model;
 using DLL.Repositories;
+using BLL.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
@@ -11,38 +10,38 @@ namespace Api.Controllers
 
     public class DepartmentController : MainApiController
     {
-        private readonly IDepartmentRepository _departmentRepository;
-        public DepartmentController(IDepartmentRepository departmentRepository)
+        private readonly IDepartmentService _departmentService;
+        public DepartmentController(IDepartmentService departmentService)
         {
-            _departmentRepository = departmentRepository;
+            _departmentService = departmentService;
         }
 
         [HttpGet]
         public async Task <IActionResult> GetAll()
         {
-            return Ok(await _departmentRepository.GetAllAsync());
+            return Ok(await _departmentService.GetAllAsync());
         }
         [HttpGet("{code}")]
         public async Task<IActionResult> GetA(string code)
         {
-            return Ok(await _departmentRepository.GetAAsync(code));
+            return Ok(await _departmentService.GetAAsync(code));
         }
 
         [HttpPost]
         public async Task<IActionResult> Insert(Department department)
         {
-            return Ok(await _departmentRepository.InsertAsync(department));
+            return Ok(await _departmentService.InsertAsync(department));
         }
 
         [HttpPut("{code}")]
         public async Task<IActionResult> Update(string code, Department department)
         {
-            return Ok(await _departmentRepository.UpdateAsync(code,department));
+            return Ok(await _departmentService.UpdateAsync(code,department));
         }
         [HttpDelete("{code}")]
         public async Task<IActionResult> Delete(string code)
         {
-            return Ok(await _departmentRepository.DeleteAsync(code));
+            return Ok(await _departmentService.DeleteAsync(code));
         }
 
     }

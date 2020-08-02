@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
 using DLL;
+using BLL;
 
 namespace API
 {
@@ -35,6 +36,8 @@ namespace API
 
 
             DLLDependency.AllDependency(services, Configuration);
+
+            BLLDependency.AllDependency(services, Configuration);
 
         }
 
