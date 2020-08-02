@@ -21,7 +21,7 @@ namespace DLL.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "students",
+                name: "Students",
                 columns: table => new
                 {
                     StudentID = table.Column<int>(nullable: false)
@@ -31,7 +31,7 @@ namespace DLL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_students", x => x.StudentID);
+                    table.PrimaryKey("PK_Students", x => x.StudentID);
                 });
         }
 
@@ -41,7 +41,7 @@ namespace DLL.Migrations
                 name: "Departments");
 
             migrationBuilder.DropTable(
-                name: "students");
+                name: "Students");
         }
     }
 }

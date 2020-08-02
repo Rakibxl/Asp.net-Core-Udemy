@@ -12,7 +12,7 @@ namespace DLL.DBContext
 
         public DbSet<Department> Departments { get; set; }
 
-        public DbSet<Student> students { get; set; }
+        public DbSet<Student> Students { get; set; }
 
     }
 }

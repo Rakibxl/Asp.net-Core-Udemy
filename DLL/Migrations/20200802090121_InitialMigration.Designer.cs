@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DLL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200725013648_InitialMigration")]
+    [Migration("20200802090121_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,7 +53,7 @@ namespace DLL.Migrations
 
                     b.HasKey("StudentID");
 
-                    b.ToTable("students");
+                    b.ToTable("Students");
                 });
 #pragma warning restore 612, 618
         }

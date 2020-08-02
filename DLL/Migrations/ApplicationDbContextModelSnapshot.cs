@@ -51,7 +51,7 @@ namespace DLL.Migrations
 
                     b.HasKey("StudentID");
 
-                    b.ToTable("students");
+                    b.ToTable("Students");
                 });
 #pragma warning restore 612, 618
         }
