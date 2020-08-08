@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+LOaELMkjM93VU5vk5PpTLxLsWcm0maHtVkNAqcEKlJjko/5A0hkxz629/ZHcC93Ff2fkcMuUi///9xDMkrlyA==",
+  "dgSpecHash": "AWbI691tvUruv5Wh1mBUbDN7ssTMSfR4BPP87bQu3IOcw7OiJ/RGEDU0ElmY1mqrHDJaNJxAC/5ttaU+Fj2HPA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Administrator\\Desktop\\Asp.net core Udemy\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\fluentvalidation\\9.0.1\\fluentvalidation.9.0.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.0.1\\fluentvalidation.aspnetcore.9.0.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.0.1\\fluentvalidation.dependencyinjectionextensions.9.0.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\4.1.1\\microsoft.aspnetcore.mvc.versioning.4.1.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
